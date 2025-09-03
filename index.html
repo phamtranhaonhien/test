@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnEnglish - Học Tiếng Anh Thông Minh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .lesson-card { transition: all 0.3s ease; }
+        .lesson-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .vocab-card { position: relative; transition: all 0.3s ease; }
+        .vocab-card:hover { transform: scale(1.05); }
+        .audio-btn { transition: all 0.2s ease; }
+        .audio-btn:hover { background-color: #16a085; }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #ffed4e; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="h-10 w-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-language text-white text-xl"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-bold text-blue-600">LearnEnglish</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#hero" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Trang chủ</a>
+                        <a href="#lessons" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Bài học</a>
+                        <a href="#vocabulary" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Từ vựng</a>
+                        <a href="#grammar" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Ngữ pháp</a>
+                        <a href="#audio" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Phát âm</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Liên hệ</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg text-white pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                Học Tiếng Anh<br>
+                <span class="text-yellow-300">Dễ dàng & Hiệu quả</span>
+            </h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Nền tảng học tiếng Anh tương tác với bài giảng trực quan, từ vựng sinh động và bài tập thực tế. 
+                Bắt đầu hành trình của bạn ngay hôm nay!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#lessons" class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">
+                    Bắt đầu học
+                </a>
+                <button onclick="alert('Tính năng đăng ký sẽ được triển khai!')" class="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                    Đăng ký miễn phí
+                </button>
+            </div>
+            <div class="mt-12">
+                <center></center><img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t1.15752-9/540552081_3986886654884756_6076276765020736285_n.png?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=IRwbOYNsJDYQ7kNvwEiwf7v&_nc_oc=AdndxT-4-phLEI_V-eQfFhhSRz6W17WZZe-GObMZoi9daqrru7ZgNcQoRhxFegHgRo0&_nc_zt=23&_nc_ht=scontent.fhan20-1.fna&oh=03_Q7cD3QEKRycVk6doCAaytKxCnzcPlxr0vdOgECuokxq-Gzem0Q&oe=68DF2221" />
+            </div></center>
+        </div>
+    </section>
+
+    <!-- Lessons Section -->
+    <section id="lessons" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Khóa học Cơ bản</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Nắm vững kiến thức nền từ phát âm đến hội thoại hàng ngày
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="lesson-card bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-md">
+                    <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-book-open text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Bài học 1: ABC Cơ bản</h3>
+                    <p class="text-gray-600 mb-4">Học bảng chữ cái và phát âm cơ bản tiếng Anh.</p>
+                    <button onclick="showLesson(1)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                        Bắt đầu học
+                    </button>
+                </div>
+                <div class="lesson-card bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl shadow-md">
+                    <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-user-friends text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Bài học 2: Giới thiệu bản thân</h3>
+                    <p class="text-gray-600 mb-4">Tự giới thiệu tên, quê quán và sở thích cơ bản.</p>
+                    <button onclick="showLesson(2)" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+                        Bắt đầu học
+                    </button>
+                </div>
+                <div class="lesson-card bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl shadow-md">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Bài học 3: Ngày tháng và Thời gian</h3>
+                    <p class="text-gray-600 mb-4">Học cách nói ngày giờ và các thời gian trong ngày.</p>
+                    <button onclick="showLesson(3)" class="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition">
+                        Bắt đầu học
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vocabulary Section -->
+    <section id="vocabulary" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Từ vựng Hàng ngày</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Học từ vựng qua hình ảnh trực quan và tương tác
+                </p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="vocab-card bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5d7001e2-0860-4136-8e6f-3b2217278423.png" alt="Hình ảnh quả táo đỏ tươi trên bàn gỗ, đại diện cho từ 'apple'" class="w-full h-32 object-cover rounded-lg mb-3" />
+                    <h4 class="font-bold text-lg mb-1">Apple</h4>
+                    <p class="text-gray-600">/ˈæpəl/</p>
+                    <p class="text-sm text-gray-500">Quả táo</p>
+                    <button onclick="playAudio('apple')" class="audio-btn bg-blue-500 text-white w-full mt-2 py-1 rounded">Nghe phát âm</button>
+                </div>
+                <div class="vocab-card bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f3afb86c-7593-49b1-84f5-4ee4f8ae51d8.png" alt="Hình ảnh ngôi nhà hai tầng với mái đỏ và cửa sổ mở, đại diện cho từ 'house'" class="w-full h-32 object-cover rounded-lg mb-3" />
+                    <h4 class="font-bold text-lg mb-1">House</h4>
+                    <p class="text-gray-600">/haʊs/</p>
+                    <p class="text-sm text-gray-500">Ngôi nhà</p>
+                    <button onclick="playAudio('house')" class="audio-btn bg-blue-500 text-white w-full mt-2 py-1 rounded">Nghe phát âm</button>
+                </div>
+                <div class="vocab-card bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/831eb0d7-91d9-4077-bcc9-cab1e81421b0.png" alt="Hình ảnh con mèo đen lông mượt ngồi trên thảm, đại diện cho từ 'cat'" class="w-full h-32 object-cover rounded-lg mb-3" />
+                    <h4 class="font-bold text-lg mb-1">Cat</h4>
+                    <p class="text-gray-600">/kæt/</p>
+                    <p class="text-sm text-gray-500">Con mèo</p>
+                    <button onclick="playAudio('cat')" class="audio-btn bg-blue-500 text-white w-full mt-2 py-1 rounded">Nghe phát âm</button>
+                </div>
+                <div class="vocab-card bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f13e647a-0685-412a-8ec5-adb1029b8642.png" alt="Hình ảnh ngôi trường học với cờ và sân chơi, đại diện cho từ 'school'" class="w-full h-32 object-cover rounded-lg mb-3" />
+                    <h4 class="font-bold text-lg mb-1">School</h4>
+                    <p class="text-gray-600">/skuːl/</p>
+                    <p class="text-sm text-gray-500">Trường học</p>
+                    <button onclick="playAudio('school')" class="audio-btn bg-blue-500 text-white w-full mt-2 py-1 rounded">Nghe phát âm</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grammar Section -->
+    <section id="grammar" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Bài tập Ngữ pháp</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Củng cố kiến thức với các bài tập tương tác
+                </p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-xl">
+                <h3 class="font-bold text-xl mb-4">Bài tập: Thì hiện tại đơn</h3>
+                <p class="mb-4">Điền động từ đúng dạng vào chỗ trống:</p>
+                <p class="mb-4">I <input id="verb1" type="text" placeholder="e.g., eat" class="border border-gray-300 px-2 py-1 rounded"> apples every day.</p>
+                <p class="mb-4">She <input id="verb2" type="text" placeholder="e.g., live" class="border border-gray-300 px-2 py-1 rounded"> in Hanoi.</p>
+                <button onclick="checkAnswers()" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+                    Kiểm tra đáp án
+                </button>
+                <p id="result" class="mt-4 text-green-600"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Pronunciation Section -->
+    <section id="audio" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Luyện Phát âm</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Nghe và lặp lại để cải thiện phát âm chuẩn
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <h3 class="font-bold mb-4">Nguyên âm ngắn</h3>
+                    <div class="space-y-2">
+                        <button onclick="playAudio('bat')" class="audio-btn bg-purple-500 text-white p-2 rounded flex items-center justify-center w-full">
+                            <i class="fas fa-play mr-2"></i>Bat (/bæt/)
+                        </button>
+                        <button onclick="playAudio('bed')" class="audio-btn bg-purple-500 text-white p-2 rounded flex items-center justify-center w-full">
+                            <i class="fas fa-play mr-2"></i>Bed (/bed/)
+                        </button>
+                        <button onclick="playAudio('sit')" class="audio-btn bg-purple-500 text-white p-2 rounded flex items-center justify-center w-full">
+                            <i class="fas fa-play mr-2"></i>Sit (/sɪt/)
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <h3 class="font-bold mb-4">Nguyên âm dài</h3>
+                    <div class="space-y-2">
+                        <button onclick="playAudio('cake')" class="audio-btn bg-indigo-500 text-white p-2 rounded flex items-center justify-center w-full">
+                            <i class="fas fa-play mr-2"></i>Cake (/keɪk/)
+                        </button>
+                        <button onclick="playAudio('bed')" class="audio-btn bg-indigo-500 text-white p-2 rounded flex items-center justify-center w-full">
+                            <i class="fas fa-play mr-2"></i>Bed (/iːd/)
+                        </button>
+                        <button onclick="playAudio('moon')" class="audio-btn bg-indigo-500 text-white p-2 rounded flex items-center justify-center w-full">
+                            <i class="fas fa-play mr-2"></i>Moon (/muːn/)
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <h3 class="font-bold mb-4">Âm tiết</h3>
+                    <div class="space-y-2">
+                        <button onclick="playAudio('think')" class="audio-btn bg-pink-500 text-white p-2 rounded flex items-center justify-center w-full">
+                            <i class="fas fa-play mr-2"></i>Think (/θɪŋk/)
+                        </button>
+                        <button onclick="playAudio('this')" class="audio-btn bg-pink-500 text-white p-2 rounded flex items-center justify-center w-full">
+                            <i class="fas fa-play mr-2"></i>This (/ðɪs/)
+                        </button>
+                        <button onclick="playAudio('ship')" class="audio-btn bg-pink-500 text-white p-2 rounded flex items-center justify-center w-full">
+                            <i class="fas fa-play mr-2"></i>Ship (/ʃɪp/)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Liên hệ Chúng tôi</h2>
+                <p class="text-lg text-gray-600">Gửi câu hỏi hoặc đề xuất để cải thiện trải nghiệm học</p>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Họ tên</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Nguyễn Văn A">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="email@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tin nhắn</label>
+                        <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Gửi tin nhắn của bạn..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Gửi tin nhắn
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="h-8 w-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-language text-white"></i>
+                        </div>
+                        <span class="ml-2 text-xl font-bold">LearnEnglish</span>
+                    </div>
+                    <p class="text-gray-400">Nền tảng học tiếng Anh sáng tạo cho mọi lứa tuổi</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Khóa học</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#lessons" class="text-gray-400 hover:text-white transition-colors">Bài học cơ bản</a></li>
+                        <li><a href="#vocabulary" class="text-gray-400 hover:text-white transition-colors">Từ vựng</a></li>
+                        <li><a href="#grammar" class="text-gray-400 hover:text-white transition-colors">Ngữ pháp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tài nguyên</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Hướng dẫn sử dụng</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Câu hỏi thường gặp</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Đơn vị liên kết</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Kết nối</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/755276c8-6750-4b83-aca4-cd7b944fceee.png" alt="Biểu tượng Facebook với chữ F màu trắng trên nền xanh" class="w-5 h-5" />
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/020edb16-0a55-4cdb-9f9f-010bebab42ee.png" alt="Biểu tượng Twitter với chim trời màu xanh trên nền trắng" class="w-5 h-5" />
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e7701308-2ab9-457b-96d9-aebfca2adf59.png" alt="Biểu tượng YouTube với hình lục giác màu đỏ" class="w-5 h-5" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 LearnEnglish. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Lessons
+        function showLesson(lessonId) {
+            alert(`Đang mở Bài học ${lessonId}. Tính năng đầy đủ sẽ được triển khai!`);
+        }
+
+        // Audio (Simplified - using alerts for demo)
+        function playAudio(word) {
+            alert(`Phát âm của từ "${word}": [Âm thanh mô phỏng]`);
+        }
+
+        // Grammar exercise
+        function checkAnswers() {
+            const v1 = document.getElementById('verb1').value.toLowerCase();
+            const v2 = document.getElementById('verb2').value.toLowerCase();
+            const result = document.getElementById('result');
+            if (v1 === 'eat' && v2 === 'lives') {
+                result.textContent = 'Tuyệt vời! Đáp án chính xác là eat và lives.';
+                result.style.color = 'green';
+            } else {
+                result.textContent = 'Thử lại nhé! Đáp án gợi ý: eat và lives.';
+                result.style.color = 'red';
+            }
+        }
+
+        // Mobile menu (simple implementation)
+        const mobileBtn = document.querySelector('.mobile-menu-button');
+        mobileBtn.addEventListener('click', () => {
+            alert('Mobile menu sẽ được triển khai trong phiên bản hoàn chỉnh!');
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
